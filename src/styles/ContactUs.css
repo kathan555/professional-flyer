@@ -41,22 +41,24 @@
   }
   
   .contact-detail {
-    display: flex;
-    align-items: flex-start;
+    display: block;
+    width: 100%;
     margin-bottom: 1.5rem;
-    margin-left: 0; 
+    margin-left: 0;
   }
   
   .contact-detail .material-symbols-outlined {
+    display: inline-block;
     margin-right: 1rem;
     color: var(--primary-color);
     font-size: 1.5rem;
     min-width: 24px; 
-    text-align: center;
+    vertical-align: middle;
   }
 
   .contact-detail-content {
-    flex: 1;
+    display: inline-block;
+    vertical-align: middle;
   }
   
   .contact-detail h3 {
@@ -71,7 +73,7 @@
   }
   
   .social-links {
-    margin-top: 2rem;
+    margin-top: 0;
   }
   
   .social-icons {

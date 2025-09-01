@@ -249,7 +249,7 @@ body::before {
 }
 
 .flyer {
-	max-width: 900px;
+	max-width: 1200px;
 	margin: 0 auto;
 	background: var(--bg-secondary);
 	border-radius: 20px;
@@ -734,6 +734,13 @@ html {
 	text-align: center;
   }
 
+/* For tablets */
+@media (max-width: 1024px) {
+	.flyer {
+	  max-width: 900px;
+	}
+}
+
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
 	body {
@@ -826,6 +833,10 @@ html {
 	.fab .material-symbols-outlined {
 		font-size: 22px;
 	}
+
+	.flyer {
+		max-width: 90%;
+	}
 	
 	/* Hide labels on very small screens */
 	@media (max-width: 480px) {
@@ -867,7 +878,7 @@ html {
 	.project-card, .experience-item {
 		padding: 20px;
 	}
-	
+
 	.summary {
 		padding: 20px;
 	}
