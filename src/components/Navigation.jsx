@@ -1,26 +1,32 @@
 // components/Navigation.jsx
 import '../styles/indexStyles.css';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
+  const location = useLocation();
+
+  // Determine if we're on the home page (either "/" or exactly "/")
+  const isHomePage = location.pathname === '/' || location.pathname === '';
+  
   return (
     <footer id="bottom-nav">
       <nav>
-        <a href="#summary" className="nav-item">
-          <span className="material-symbols-outlined">person</span>
-          <span className="nav-label">Summary</span>
-        </a>
-        <a href="#skills" className="nav-item">
-          <span className="material-symbols-outlined">code</span>
-          <span className="nav-label">Skills</span>
-        </a>
-        <a href="#experience" className="nav-item">
-          <span className="material-symbols-outlined">work</span>
-          <span className="nav-label">Experience</span>
-        </a>
-        <a href="#projects" className="nav-item">
-          <span className="material-symbols-outlined">folder</span>
-          <span className="nav-label">Projects</span>
-        </a>
+       <Link to="/" className={`nav-item ${isHomePage ? 'active' : ''}`}>
+          <span className="material-symbols-outlined">home</span>
+          <span className="nav-label">Home</span>
+        </Link>
+        <Link to="/play" className={`nav-item ${location.pathname === '/play' ? 'active' : ''}`}>
+          <span className="material-symbols-outlined">sports_esports</span>
+          <span className="nav-label">Play</span>
+        </Link>
+        <Link to="/calculate" className={`nav-item ${location.pathname === '/calculate' ? 'active' : ''}`}>
+          <span className="material-symbols-outlined">calculate</span>
+          <span className="nav-label">Calculate</span>
+        </Link>
+        <Link to="/contactus" className={`nav-item ${location.pathname === '/contactus' ? 'active' : ''}`}>
+          <span className="material-symbols-outlined">contact_page</span>
+          <span className="nav-label">ContactUs</span>
+        </Link>
       </nav>
     </footer>
   );
