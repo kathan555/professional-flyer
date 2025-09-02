@@ -11,7 +11,7 @@ import Navigation from './components/Navigation';
 import FloatingButtons from './components/FloatingButtons';
 import ThemeToggle from './components/ThemeToggle';
 import Fab from './components/Fab';
-import Play from './components/pages/Play';
+import TechGame from './components/pages/TechGame';
 import Calculate from './components/pages/Calculate';
 import ContactUs from './components/pages/ContactUs';
 import './styles/indexStyles.css';
@@ -51,7 +51,7 @@ function App() {
           {/* Redirect root path to home */}
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<Navigate to="/" replace />} />
-          <Route path="/play" element={<Play />} />
+          <Route path="/techGame" element={<TechGame />} />
           <Route path="/calculate" element={<Calculate />} />
           <Route path="/contactus" element={<ContactUs />} />
           {/* Catch all route - redirect to home */}

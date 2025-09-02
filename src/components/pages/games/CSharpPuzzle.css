@@ -1,0 +1,133 @@
+/* components/pages/games/CSharpPuzzle.css */
+.csharp-game {
+    padding: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .csharp-game h3 {
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  
+  .puzzle-description {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  .puzzle-description h4 {
+    margin-top: 0;
+    color: var(--text-primary);
+  }
+  
+  .puzzle-description p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  
+  .code-editor {
+    margin-bottom: 1.5rem;
+  }
+  
+  .code-editor textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: #2d2d2d;
+    color: #f8f8f2;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9rem;
+    resize: vertical;
+    min-height: 200px;
+  }
+  
+  [data-theme="light"] .code-editor textarea {
+    background: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+  
+  .game-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .game-button {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  
+  .game-button:hover {
+    background: var(--primary-dark);
+  }
+  
+  .game-button-secondary {
+    padding: 0.75rem 1.5rem;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+    background: #f83579;    
+  }
+  
+  .game-button-secondary:hover {
+    background: #bbbbbb;
+  }
+  
+  .output-container {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+  }
+  
+  .output-container h4 {
+    margin-top: 0;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  .output {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: 'Consolas', monospace;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    margin: 0;
+  }
+  
+  [data-theme="light"] .output {
+    background: #f8f8f8;
+    color: #333;
+    border: 1px solid #eee;
+  }

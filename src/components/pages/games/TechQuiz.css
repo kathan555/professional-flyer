@@ -1,0 +1,121 @@
+/* components/pages/games/TechQuiz.css */
+.quiz-game {
+    padding: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .quiz-game h3 {
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .quiz-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  
+  .question-container {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  .question-container h4 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+  }
+  
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  @media (min-width: 480px) {
+    .options-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .option-button {
+    padding: 1rem;
+    background: var(--input-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--form-input-color);/**/
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+  
+  .option-button:hover {
+    border-color: var(--primary-color);
+    background: rgba(74, 144, 226, 0.1);
+    color: var(--text-primary);
+  }
+  
+  .option-button:active {
+    transform: scale(0.98);
+  }
+  
+  .explanation {
+    background: rgba(74, 144, 226, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .explanation p {
+    margin: 0;
+    color: var(--text-primary);
+    font-style: italic;
+  }
+  
+  .quiz-result {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid var(--primary-color);
+  }
+  
+  .quiz-result h4 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .quiz-result p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .game-button {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  
+  .game-button:hover {
+    background: var(--primary-dark);
+  }

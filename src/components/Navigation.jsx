@@ -15,9 +15,9 @@ const Navigation = () => {
           <span className="material-symbols-outlined">home</span>
           <span className="nav-label">Home</span>
         </Link>
-        <Link to="/play" className={`nav-item ${location.pathname === '/play' ? 'active' : ''}`}>
+        <Link to="/techGame" className={`nav-item ${location.pathname === '/techGame' ? 'active' : ''}`}>
           <span className="material-symbols-outlined">sports_esports</span>
-          <span className="nav-label">Play</span>
+          <span className="nav-label">Tech Game</span>
         </Link>
         <Link to="/calculate" className={`nav-item ${location.pathname === '/calculate' ? 'active' : ''}`}>
           <span className="material-symbols-outlined">calculate</span>
