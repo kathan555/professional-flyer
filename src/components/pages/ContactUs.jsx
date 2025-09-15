@@ -1,6 +1,7 @@
 // components/pages/ContactUs.jsx
 import React, { useState } from 'react';
 import Header from '../Header';
+import emailjs from 'emailjs-com';
 import '../../styles/ContactUs.css';
 
 const ContactUs = () => {
@@ -55,12 +56,14 @@ const ContactUs = () => {
     e.preventDefault();
     
     if (validateForm()) {
-      // In a real application, you would send this data to a backend
-      // which would then send the email
-      console.log('Form submitted:', formData);
-      
-      // Simulate sending email
-      setTimeout(() => {
+      // Send email using EmailJS
+      emailjs.send(
+        'Pratham_emailService', // Replace with your EmailJS service ID
+        'template_5mgfidj', // Replace with your EmailJS template ID
+        formData,
+        'QLYSVJM-sCsz4tcM7' // Replace with your EmailJS user ID
+      )
+      .then((result) => {
         setNotification('Mail has been sent and Kathan will reach out to you shortly');
         
         // Clear notification after 5 seconds
@@ -76,7 +79,12 @@ const ContactUs = () => {
           phone: '',
           message: ''
         });
-      }, 500);
+      }, (error) => {
+        setNotification('Sorry, there was an error sending your message. Please try again.');
+        setTimeout(() => {
+          setNotification('');
+        }, 5000);
+      });
     }
   };
 
